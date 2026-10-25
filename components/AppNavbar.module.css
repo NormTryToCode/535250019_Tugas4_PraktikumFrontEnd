@@ -1,0 +1,16 @@
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  /* Bootstrap uses this variable for the active link's text color */
+  --bs-navbar-active-color: var(--paw-primary-dark);
+}
+
+.brand {
+  font-weight: 800;
+  color: var(--paw-primary);
+}
+
+/* The current page's menu item */
+.active {
+  font-weight: 700;
+  border-bottom: 2px solid var(--paw-primary);
+}
