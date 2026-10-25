@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { Badge, Container } from "react-bootstrap";
 import { services } from "@/data/services";
+import { formatPrice } from "@/utils/formatPrice";
 
 export default function ServiceDetailPage() {
   // For the URL /catalog/3, params.id is the text "3"
@@ -33,7 +34,7 @@ export default function ServiceDetailPage() {
       </Badge>
       <h1 className="fw-bold">{service.name}</h1>
       <p className="lead">{service.description}</p>
-      <p className="fs-4 fw-bold">From Rp {service.priceFrom}</p>
+      <p className="fs-4 fw-bold">From {formatPrice(service.priceFrom)}</p>
       <Link href="/contact" className="btn btn-paw me-2">
         Book this service
       </Link>

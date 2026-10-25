@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Badge, Card } from "react-bootstrap";
 import type { Service } from "@/data/services";
+import { formatPrice } from "@/utils/formatPrice";
 import styles from "./ServiceCard.module.css";
 
 type ServiceCardProps = {
@@ -19,7 +20,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         </Badge>
         <Card.Title>{service.name}</Card.Title>
         <Card.Text>{service.description}</Card.Text>
-        <p className={styles.price}>From Rp {service.priceFrom}</p>
+        <p className={styles.price}>From Rp {formatPrice(service.priceFrom)}</p>
         <Link
           href={`/catalog/${service.id}`}
           className="btn btn-paw btn-sm mt-3"
